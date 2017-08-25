@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body>
+	<!-- 所需扫描的包 -->
+	<component-scan>com.work.controller</component-scan>
+	<!-- 所需拦截的注解的类  interceptor1,interceptor2  如写多个则对应存在 -->
+	<!-- <interceptor>com.login.interceptor.annotation.Interception</interceptor> -->
+	<!-- 需要拦截的模块名称   name1,name2 -->
+	<interceptor-name>onlineUser</interceptor-name>
+	<!-- 如对象不存在时返回地址   url1,url2 如写多个则对应所需拦截对象的名字 -->
+	<return-url>/user/toAutoLogin</return-url>
+	<!-- 如对象不存在时并且此拦截地址为API接口时 返回数据 可为空   1.2版本支持 -->
+	<return-str>{"RETURN_CODE":"0001","RETURN_MSG":"失败","RETURN_RESULT":"用户未登录"}</return-str>
+	<!-- 返回数据的编码格式，如不填，默认为UTF-8   1.2版本支持 -->
+	<return-str-encode>UTF-8</return-str-encode>
+</body>
